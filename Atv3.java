@@ -1,28 +1,33 @@
-package ExerciciosGen;
+package LacosDecisao;
 
 import java.util.Scanner;
 
 public class Atv3 {
-		public static void main (String[] args) {
+	
+	public static void main (String[] arg) {
+		
+		int idade;
+		Scanner leia = new Scanner (System.in);
+		
+		System.out.println("\nInsira sua idade: ");
+		idade = leia.nextInt();
+		
+		if(idade <18 && idade > 15){
 			
-			int hr, min, segundos, resto, resto2, resultado;
-			Scanner leia = new Scanner (System.in);
+			System.out.println ("\nDe acordo com sua idade, você se enquadra na categoria Juvenil!");
+		}
+			else if (idade <15 && idade >10) {
+				System.out.println("\nDe acordo com sua idade, você se enquadra na categoria Infantil!");
 			
-			System.out.println ("Quantos segundos durou o evento da fábrica?");
+			} else if (idade >18) {
+				System.out.println("\nDe acordo com sua idade, você se enquadra na categoria Adulto!");
+				
+			} if (idade <10) {
+				System.out.println ("\nOps, você inseriu uma idade fora das categorias aceitas... A faixa etária aceita é a partir de 10 anos.");
+			}
 			
-			segundos = leia.nextInt();
-			hr = segundos/3600;
-			resto= segundos%3600;
-			min= resto/60;
-			resto2= resto%60;
-			resultado= resto2;
-			
-     	System.out.println ("Uau, o evento durou "+ hr+" horas "+ min+" minutos e "+ resultado+" segundos!");
-     	
-
-
-
-
+		}
+		
+		
 		
 	}
-}

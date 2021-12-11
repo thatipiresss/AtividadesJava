@@ -1,28 +1,35 @@
-package ExerciciosGen;
+package LacosDecisao;
 
 import java.util.Scanner;
 
 public class Atv1 {
-
-	 public static void main(String[] args) {
-					
-		 
-		 int idade, mes, dia ;
-		 Scanner leia = new Scanner (System.in);
-		 
-		 System.out.println ("Qual sua idade? ");
-		 idade = leia.nextInt();
-		 System.out.println (idade+" anos e quantos meses?");
-		 mes = leia.nextInt();
-		 System.out.println (idade+ " anos "+ mes+ " meses e quantos dias?");
-		 dia = leia.nextInt();
-		 System.out.println ("UAU, você tem "+ (idade*365+mes*30+dia)+" dias de vida!!!");
-
-			}
-		}	 
 	
-
-	 
-
-
+	public static void main (String[] args) {
 		
+		int num1, num2, num3;
+		Scanner leia = new Scanner (System.in);
+		
+		System.out.println("Entre com o primeiro número: ");
+			num1 = leia.nextInt();
+		
+		System.out.println("Entre com o segundo número: ");
+			num2 = leia.nextInt();
+			
+		System.out.println("Entre com o terceiro número: ");
+			num3 = leia.nextInt();
+			
+		if (num1>num2 && num1>num3) {
+			
+				System.out.println ("\nO número "+ num1+ " foi o maior número digitado!");
+	
+		}	else if (num2>num3 && num2>num1) {
+			
+				System.out.println ("\nO número" +num2+ " foi o maior número digitado!");
+		} if (num3>num2 && num3>num1) {
+			
+				System.out.println ("\nO número " + num3 + " foi o maior número digitado!");
+		}
+		
+	}
+
+}
